@@ -1,0 +1,25 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // 自分の得意な言語で
+        // Let's チャレンジ！！
+        Scanner br = new Scanner(System.in);
+        double n = br.nextInt();
+        double p = br.nextInt();
+        double m = br.nextInt();
+        double q = br.nextInt();
+
+        // System.out.println(n);
+        // System.out.println(p);
+        // System.out.println(m);
+        // System.out.println(q);
+        double np = p * n;
+        double qnm = q * (Math.ceil((double)n/(double)m));
+        double calc = np + qnm;
+        System.out.println((int)calc);
+    }
+} 
