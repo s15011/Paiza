@@ -1,0 +1,51 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // 自分の得意な言語で
+        // Let's チャレンジ！！
+        Scanner br = new Scanner(System.in);
+        int Number = br.nextInt();
+        int middle = Number / 2;
+        String str = new String();
+        int EVEN = 0;
+        int ODD = 0;
+        
+        while(br.hasNext()) {
+            String buf = br.nextLine();
+            str = str + buf;
+        }
+        
+        if (Number % 2 == 0) {
+            EVEN = Number;
+        }
+        else {
+            ODD = Number;
+        }
+        String[] CARD = str.split(" ");
+        
+        if (EVEN != 0) {
+            Integer CARDS[] = new Integer[EVEN];
+            for (int i = 0; i < EVEN; i++) {
+                CARDS[i] = Integer.parseInt(CARD[i]);
+            
+            }
+            Arrays.sort(CARDS, Comparator.reverseOrder());
+            System.out.println(CARDS[middle]);
+        }
+        else {
+            Integer CARDS[] = new Integer[ODD];
+            for (int i = 0; i < ODD; i++) {
+                CARDS[i] = Integer.parseInt(CARD[i]);
+            }
+            
+            Arrays.sort(CARDS, Comparator.reverseOrder());
+            System.out.println(CARDS[middle]);
+            
+        }
+        
+       
+    }
+}
